@@ -69,21 +69,50 @@
 .nav-buttons {
     display: flex;
 }
+.name-footer {
+  color: #E50057 ;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 8px;
+}
+
+.name-footer:hover {
+  color: white ;
+}
+.developer-info{
+    color: white ;
+}
 </style>
  
-<div class="container">
-    <div class="nav-container">
-        <%= image_tag 'logo.png', class: "img-logo" %>
-        <nav class="navbar navbar-light bg-light">
-            <div class="nav-buttons">
-                <%= link_to "Sobre mim", about_index_path, class: "btn btn-outline-success me-2" %>
-                <%= link_to "Projetos",  project_index_path, class: "btn btn-outline-success me-2" %>
-                <%= link_to "Contato",   contact_index_path, class: "btn btn-outline-success me-2" %>
+    <div class="container">
+        <div class="nav-container">
+            <%= link_to root_path do %>
+              <%= image_tag 'logo.png', class: "img-logo" %>
+            <% end %>
+            <nav class="navbar navbar-light bg-light">
+                <div class="nav-buttons">
+                    <%= link_to "Sobre mim", about_index_path, class: "btn btn-outline-success me-2" %>
+                    <%= link_to "Projetos",  project_index_path, class: "btn btn-outline-success me-2" %>
+                    <%= link_to "Contato",   contact_index_path, class: "btn btn-outline-success me-2" %>
+                </div>
+            </nav>
+        </div>
+        <%= yield %>
+        <footer style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="footer-content">
+                <div class="additional-info">
+                    <div class="copyright developer-info">
+                        &copy; <%= Time.now.year %> Todos os direitos reservados
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-</div>
-
-    <%= yield %>
+            <div class="developer-info">
+                Desenvolvido por: 
+                <a href="https://www.instagram.com/lari_seviilha/" class="name-footer" target="_blank">
+                  Larissa Sevilha
+                </a> 
+            </div>
+        </footer> 
+     </div> 
   </body>
 </html>
