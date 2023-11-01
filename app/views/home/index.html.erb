@@ -1,0 +1,19 @@
+<div class="container img-home">
+    <%= image_tag 'larihome.png' %>
+    <% @home.each do |h| %>
+        <% words = h.title.split(" ") %>
+        <h1 class="text-home">
+            <span class="web-title"><%= words[0] %></span>
+            <span class="developer-title"><%= words[1..].join(" ") %></span>
+        </h1>
+    <% end %>
+</div>
+<div class="oval-container">
+    <div class="oval back">Back End</div>
+    <div class="oval css">CSS</div>
+    <div class="oval pg">Postgres</div>
+    <div class="oval figma">Figma</div>
+    <div class="oval scraping">Web Scraping</div>
+    <div class="oval ruby">Ruby on Rails</div>
+    <div class="oval html">HTML</div>
+</div>

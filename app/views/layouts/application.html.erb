@@ -58,8 +58,34 @@
     .btn {
         font-size: 14px;
     } 
+    footer {
+        font-size: 15px;
+        flex-direction: column;
+    }
 }
-
+@media (max-width: 767px) {
+    .img-home {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .text-home {
+        color: #E50057;
+        font-family: Inria Sans;
+        font-size: 30px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+     
+    .img-home img,
+    .img-home video {
+        width: 50%;  
+        margin: 0 10px;  
+    }
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -82,6 +108,48 @@
 .developer-info{
     color: white ;
 }
+.img-home{
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+    margin-bottom: 32px;
+}
+.text-home{
+    color: #E50057;
+    font-family: Inria Sans;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;   
+}
+.web-title {
+    display: block; /* Para que "Web" fique em uma linha separada */
+}
+
+.developer-title {
+    display: block; 
+    margin-top: 5px; /* Adicione margem superior para posicioná-lo abaixo de "Web" */
+}
+.oval {
+    display: flex;
+    width: 140px;
+    padding: 12px 37px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 59px;
+    background: #E50057;
+    font-size: 16px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.oval:hover {
+    transform: scale(1.2);
+}
+.oval p {
+    margin: 0; /* Remova margens padrão do parágrafo */
+    color: #FFF; /* Cor do texto */
+} 
 </style>
  
     <div class="container">
