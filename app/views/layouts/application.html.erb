@@ -150,6 +150,32 @@
     margin: 0; /* Remova margens padrão do parágrafo */
     color: #FFF; /* Cor do texto */
 } 
+
+
+.about-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.container.about-cont {
+  max-width: 100%;
+  padding: 20px;
+}
+.container.about-cont img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+    .container.about-cont {
+      padding: 10px;
+    }
+
+    .container.about-cont img {
+      display: block;
+      margin: 0 auto 10px; /* Coloca a imagem no centro e adiciona margem na parte inferior */
+    }
+}
+
 </style>
  
     <div class="container">
