@@ -201,6 +201,19 @@
     color: #F9005F !important;
     background-color: white !important;
 }
+
+.menu-link {
+  transition: transform 0.3s;  
+}
+
+.menu-link:hover {
+  transform: scale(1.1); 
+}
+
+.menu-link:active {
+  transform: scale(1.1);  
+}
+
 </style>
  
     <div class="container">
@@ -210,9 +223,9 @@
             <% end %>
             <nav class="navbar navbar-light bg-light">
                 <div class="nav-buttons">
-                    <%= link_to "Sobre mim", about_index_path, class: "btn btn-outline-success me-2" %>
-                    <%= link_to "Projetos",  project_index_path, class: "btn btn-outline-success me-2" %>
-                    <%= link_to "Contato",   contact_index_path, class: "btn btn-outline-success me-2" %>
+                    <%= link_to "Sobre mim", about_index_path, class: "btn btn-outline-success me-2 menu-link" %>
+                    <%= link_to "Projetos", project_index_path, class: "btn btn-outline-success me-2 menu-link" %>
+                    <%= link_to "Contato", contact_index_path, class: "btn btn-outline-success me-2 menu-link" %> 
                 </div>
             </nav>
         </div>
