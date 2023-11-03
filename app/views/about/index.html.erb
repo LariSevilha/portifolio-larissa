@@ -1,11 +1,16 @@
+<style>
+    .p-about{
+        color: #969696 !important;
+    }
+</style>
 <div class="container about-cont">
-    <%= image_tag 'lariabout.png' %>
-    <% @about.each do |a| %> 
-    <p>
-        <%= a.text%>
-    </p>  
-    <%end%>
+    <%= image_tag 'lariabout.png'  %>
+    <% @about.each do |a| %>
+        <p class="p-about">
+            <%= a.text %>
+        </p>
+    <% end %>
 </div>
-<div class="container text-center ">
+<div class="container text-center">
     <a class="custom-button" href="https://www.linkedin.com/in/larissa-sevilha-378718217/">Veja mais no meu linkedin</a>
 </div>
