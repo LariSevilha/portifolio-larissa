@@ -13,13 +13,10 @@
   </head>
 
   <body>
-  <style>
-  body {
-    background-color: black;
-}
+  <style>  
 
 .navbar {
-    background-color: black !important;
+    background-color: white !important;
 }
 
 .btn {
@@ -103,10 +100,10 @@
 }
 
 .name-footer:hover {
-  color: white ;
+  color: purple;
 }
 .developer-info{
-    color: white ;
+    color: black ;
 }
 .img-home{
     display: flex;
@@ -155,6 +152,8 @@
 .about-cont {
     display: flex;
     justify-content: center;
+    align-items: center; 
+    gap: 45px;
 }
 
 .container.about-cont {
@@ -174,8 +173,10 @@
       display: block;
       margin: 0 auto 10px; /* Coloca a imagem no centro e adiciona margem na parte inferior */
     }
-}
-
+     .about-cont {
+        flex-direction: column; /* Altere a direção do flex para empilhar verticalmente em telas menores */
+     }
+} 
 </style>
  
     <div class="container">
