@@ -120,12 +120,12 @@
     line-height: normal;   
 }
 .web-title {
-    display: block; /* Para que "Web" fique em uma linha separada */
+    display: block;  
 }
 
 .developer-title {
     display: block; 
-    margin-top: 5px; /* Adicione margem superior para posicioná-lo abaixo de "Web" */
+    margin-top: 5px;  
 }
 .oval {
     display: flex;
@@ -144,10 +144,9 @@
     transform: scale(1.2);
 }
 .oval p {
-    margin: 0; /* Remova margens padrão do parágrafo */
-    color: #FFF; /* Cor do texto */
+    margin: 0;  
+    color: #FFF; 
 } 
-
 
 .about-cont {
     display: flex;
@@ -171,12 +170,30 @@
 
     .container.about-cont img {
       display: block;
-      margin: 0 auto 10px; /* Coloca a imagem no centro e adiciona margem na parte inferior */
+      margin: 0 auto 10px;  
     }
      .about-cont {
-        flex-direction: column; /* Altere a direção do flex para empilhar verticalmente em telas menores */
+        flex-direction: column;  
      }
 } 
+.custom-button {
+   display: inline-flex;
+    height: 63px;
+    padding: 32px; 
+    align-items: center;
+    flex-shrink: 0;
+    background: #F9005F;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+    border: 1px solid  #F9005F !important;
+}
+.custom-button:hover{
+    color: #F9005F !important;
+    background-color: white !important;
+}
 </style>
  
     <div class="container">
