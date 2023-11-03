@@ -1,2 +1,135 @@
-<h1>Project#index</h1>
-<p>Find me in app/views/project/index.html.erb</p>
+  <style>
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    border: 1px solid #F9005F;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    justify-content: space-between;   
+    min-height: 350px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px; 
+    max-height: 150px;  
+    border-radius: 5px;
+    object-fit: cover;  
+}
+
+.card a {
+    text-decoration: none;
+    color: #F9005F; 
+    margin: 10px 0;
+    flex: 1; 
+}
+.card hr {
+    width: 50%;  
+    border: 1px solid #F9005F;
+    margin: 10px auto;
+}
+.card p {
+    font-size: 14px;
+    flex: 1; 
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+} 
+.access-button{ 
+    border: 1px solid #F9005F;
+    border-radius: 34px;
+    width: 155px;
+    padding: 7px 14px;
+}
+
+.title-project{
+    color: #F9005F;
+    text-transform: uppercase;
+}
+
+.btn-accs{
+    margin: 25px;
+}
+</style>
+<h1 class="mt-5 mb-5 text-center title-project">Projetos</h1>
+<div class="card-container">
+     <div class="card">
+        <%= image_tag 'proje1.png'%>
+        <a href="https://renatofrutuoso.fly.dev/">Consultoria Online - <br> Renato Frutuoso</a>
+        <p>Texto 1</p>
+        <div class="btn-accs">
+          <a href="https://renatofrutuoso.fly.dev/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação própria</p>
+    </div>
+    
+    <div class="card">
+        <%= image_tag 'proje2.png'%>
+        <a href="https://empregos.acina.com.br/">Banco de talentos - <br> Empregos Acina </a>
+        <p>Texto 2</p>
+        <div class="btn-accs">
+            <a href="https://empregos.acina.com.br/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação colaborativa com Agêcia W3</p>
+    </div>
+
+    <div class="card">
+        <%= image_tag 'proje3.png'%> 
+        <a href="https://diocesedenavirai.org.br/">Diocese de Naviraí - ms</a>
+        <p>Texto 3</p>
+        <div class="btn-accs">
+          <a href="https://diocesedenavirai.org.br/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação colaborativa com Agêcia W3</p>
+    </div>
+    
+    <div class="card">
+        <%= image_tag 'proje4.png'%> 
+        <a href="https://megatecnologia.net.br/">Mega Tecnologia</a>
+        <p>Texto 4</p>
+        <div class="btn-accs">
+            <a href="https://megatecnologia.net.br/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação colaborativa com Agêcia W3</p>
+    </div>
+    
+    <div class="card">
+        <%= image_tag 'proje5.png'%> 
+        <a href="https://agenciaw3.digital/">Agência W3</a>
+        <p>Texto 5</p>
+        <div class="btn-accs">
+            <a href="https://agenciaw3.digital/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação colaborativa com Agêcia W3</p>
+    </div>
+    
+    <div class="card">
+        <%= image_tag 'proje6.png'%>
+        <a href="https://camerite.agenciaw3.digital/">Camerite - <br> Segurança</a>
+        <p>Texto 1</p>
+        <div class="btn-accs">
+          <a href="https://camerite.agenciaw3.digital/" class="access-button" target="_blank">Acessar Projeto</a>
+        </div>
+        <hr>
+        <p>Criação colaborativa com Agêcia W3</p>
+    </div>
+</div>
