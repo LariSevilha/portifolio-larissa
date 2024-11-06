@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-pink-100 text-pink-900">
+    <header class="bg-pink-300 text-white p-4 text-center">
+        <h1 class="text-3xl font-bold">Larissa Sevilha</h1>
+        <nav>
+            <ul class="flex justify-center space-x-4">
+                <li><a href="#sobre" class="hover:underline">Sobre Mim</a></li>
+                <li><a href="#projetos" class="hover:underline">Projetos</a></li>
+                <li><a href="#contato" class="hover:underline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre" class="p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Sobre Mim</h2>
+        <img src="./img/img1.jpeg" alt="Minha Foto" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+        <p>Desenvolvedora back-end ruby on rails</p>
+    </section>
+
+    <section id="projetos" class="p-8 bg-pink-200 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="projeto bg-white p-4 rounded shadow-md">
+                <img src="imagem1.jpg" alt="Imagem do Projeto 1" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-semibold">Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
+            </div>
+            <div class="projeto bg-white p-4 rounded shadow-md">
+                <img src="imagem2.jpg" alt="Imagem do Projeto 2" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-semibold">Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+            </div>
+            <div class="projeto bg-white p-4 rounded shadow-md">
+                <img src="imagem3.jpg" alt="Imagem do Projeto 3" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-semibold">Projeto 3</h3>
+                <p>Descrição do projeto 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="p-8 text-center bg-pink-100">
+        <h2 class="text-2xl font-semibold mb-4">Contato</h2>
+        <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain"
+            class="space-y-4 max-w-md mx-auto">
+            <div>
+                <label for="nome" class="block text-sm font-medium text-pink-900">Nome:</label>
+                <input type="text" id="nome" name="nome" required
+                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-pink-900">Email:</label>
+                <input type="email" id="email" name="email" required
+                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white">
+            </div>
+            <div>
+                <label for="mensagem" class="block text-sm font-medium text-pink-900">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required
+                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white"></textarea>
+            </div>
+            <button type="submit" class="bg-pink-500 text-white p-2 rounded hover:bg-pink-600">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="bg-pink-300 text-white p-4 text-center">
+        <p>&copy; 2023 Meu Nome. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
