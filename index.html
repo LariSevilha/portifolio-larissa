@@ -6,72 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .projeto:hover {
+            transform: translateY(-10px);
+        }
+
+        .hover-transition {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-transition:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
 
-<body class="bg-pink-100 text-pink-900">
-    <header class="bg-pink-300 text-white p-4 text-center">
-        <h1 class="text-3xl font-bold">Larissa Sevilha</h1>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4 text-center shadow-lg">
+        <div class="flex justify-center items-center mb-4 space-x-4">
+            <img src="./img/logo.png" alt="Logo" class="h-12">
+            <h1 class="text-4xl font-extrabold tracking-tight">Larissa Sevilha</h1>
+        </div>
         <nav>
-            <ul class="flex justify-center space-x-4">
-                <li><a href="#sobre" class="hover:underline">Sobre Mim</a></li>
-                <li><a href="#projetos" class="hover:underline">Projetos</a></li>
-                <li><a href="#contato" class="hover:underline">Contato</a></li>
+            <ul class="flex justify-center space-x-8 text-lg">
+                <li><a href="#sobre" class="nav-link relative hover:underline">Sobre Mim</a></li>
+                <li><a href="#tecnologias" class="nav-link relative hover:underline">Tecnologias</a></li>
+                <li><a href="#projetos" class="nav-link relative hover:underline">Projetos</a></li>
+                <li><a href="#contato" class="nav-link relative hover:underline">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="sobre" class="p-8 text-center">
-        <h2 class="text-2xl font-semibold mb-4">Sobre Mim</h2>
-        <img src="./img/img1.jpeg" alt="Minha Foto" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-        <p>Desenvolvedora back-end ruby on rails</p>
+    <section id="sobre" class="p-12 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Sobre Mim</h2>
+        <img src="./img/img1.jpeg" alt="Minha Foto" class="w-32 h-32 object-cover rounded-full mx-auto mb-6 shadow-xl">
+        <p class="text-lg leading-relaxed">Desenvolvedora back-end Ruby on Rails especializada em portais de noticias e
+            administração pública.</p>
     </section>
 
-    <section id="projetos" class="p-8 bg-pink-200 text-center">
-        <h2 class="text-2xl font-semibold mb-4">Projetos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="projeto bg-white p-4 rounded shadow-md">
-                <img src="imagem1.jpg" alt="Imagem do Projeto 1" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold">Projeto 1</h3>
-                <p>Descrição do projeto 1.</p>
+    <section id="tecnologias" class="p-12 bg-gray-800 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Tecnologias</h2>
+        <div class="flex justify-center space-x-8">
+            <div class="hover-transition">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg" alt="Rails"
+                    class="h-16 mx-auto mb-2">
+                <p>Ruby on Rails</p>
             </div>
-            <div class="projeto bg-white p-4 rounded shadow-md">
-                <img src="imagem2.jpg" alt="Imagem do Projeto 2" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold">Projeto 2</h3>
-                <p>Descrição do projeto 2.</p>
+            <div class="hover-transition">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                    class="h-16 mx-auto mb-2">
+                <p>Figma</p>
             </div>
-            <div class="projeto bg-white p-4 rounded shadow-md">
-                <img src="imagem3.jpg" alt="Imagem do Projeto 3" class="w-full h-48 object-cover rounded mb-4">
-                <h3 class="text-xl font-semibold">Projeto 3</h3>
-                <p>Descrição do projeto 3.</p>
+            <div class="hover-transition">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+                    alt="PostgreSQL" class="h-16 mx-auto mb-2">
+                <p>PostgreSQL</p>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="p-8 text-center bg-pink-100">
+    <section id="projetos" class="p-12 bg-gray-800 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="projeto bg-gray-700 p-6 rounded-lg shadow-lg hover-transition">
+                <img src="./img/renato.JPG" alt="Imagem do Projeto 1" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold">Consultoria Esportiva</h3>
+                <p class="text-sm">Site pessoal de consultoria esportiva.</p>
+                <a href="https://renatofrutuoso.fly.dev/" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Acesse</a>
+            </div>
+            <div class="projeto bg-gray-700 p-6 rounded-lg shadow-lg hover-transition">
+                <img src="./img/jatei.JPG" alt="Imagem do Projeto 2" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold">Prefeitura Municipal de Jateí</h3>
+                <p class="text-sm">Site para prefeitura.</p>
+                <a href="https://www.jatei.ms.gov.br/" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Acesse</a>
+            </div>
+            <div class="projeto bg-gray-700 p-6 rounded-lg shadow-lg hover-transition">
+                <img src="./img/acina.JPG" alt="Imagem do Projeto 3" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold">Sistema de Empregos</h3>
+                <p class="text-sm">Sistema de geração de currículos e vagas de emprego.</p>
+                <a href="https://empregos.acina.com.br/" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Acesse</a>
+            </div>
+        </div>
+    </section>
+    <section id="contato" class="p-8 text-center bg-gray-900">
         <h2 class="text-2xl font-semibold mb-4">Contato</h2>
         <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain"
-            class="space-y-4 max-w-md mx-auto">
+            class="space-y-6 max-w-lg mx-auto text-left">
             <div>
-                <label for="nome" class="block text-sm font-medium text-pink-900">Nome:</label>
+                <label for="nome" class="block text-sm font-medium text-white">Nome:</label>
                 <input type="text" id="nome" name="nome" required
-                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white">
+                    class="mt-1 p-3 border border-blue-500 rounded w-full bg-gray-700 text-white">
             </div>
             <div>
-                <label for="email" class="block text-sm font-medium text-pink-900">Email:</label>
+                <label for="email" class="block text-sm font-medium text-white">Email:</label>
                 <input type="email" id="email" name="email" required
-                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white">
+                    class="mt-1 p-3 border border-blue-500 rounded w-full bg-gray-700 text-white">
             </div>
             <div>
-                <label for="mensagem" class="block text-sm font-medium text-pink-900">Mensagem:</label>
+                <label for="mensagem" class="block text-sm font-medium text-white">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required
-                    class="mt-1 p-2 border border-pink-300 rounded w-full bg-white"></textarea>
+                    class="mt-1 p-3 border border-blue-500 rounded w-full bg-gray-700 text-white h-32"></textarea>
             </div>
-            <button type="submit" class="bg-pink-500 text-white p-2 rounded hover:bg-pink-600">Enviar</button>
+            <div class="text-right">
+                <button type="submit" class="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Enviar</button>
+            </div>
         </form>
     </section>
 
-    <footer class="bg-pink-300 text-white p-4 text-center">
-        <p>&copy; 2023 Meu Nome. Todos os direitos reservados.</p>
+    <footer class="bg-gray-700 text-white p-4 text-center">
+        <p>&copy; 2023 Larissa Sevilha. Todos os direitos reservados.</p>
     </footer>
 </body>
 
